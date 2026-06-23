@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Call — Contact | Dunnett Group</title>
+  <meta name="description" content="Book a discovery call with Dunnett Group. A short conversation is usually all that's needed to confirm the right level of EHS support for your business." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.jpeg" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Dunnett Group home">
+        <img src="assets/logo.jpeg" alt="Dunnett Group" />
+        <span><b>DUNNETT</b><span>GROUP</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">What We Do</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn--gold" href="contact.html">Book a Call</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Book a discovery call</h1>
+      <p>A short conversation is usually all that's needed to confirm the right level of support for your business. Tell us a little about your needs and we'll be in touch.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container contact-grid">
+
+      <!-- details -->
+      <div>
+        <span class="eyebrow">Contact details</span>
+        <hr class="rule" />
+        <h2>Let's talk</h2>
+        <p class="lead" style="margin-bottom:2rem;">Whether you need a one-off project, ad-hoc advice or ongoing EHS leadership, we'll explain exactly what's included — and why — before any work starts.</p>
+
+        <div class="contact-detail">
+          <div class="k">Phone</div>
+          <div class="v"><a href="tel:+447947678562">+44 (0)7947 678562</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="k">General enquiries</div>
+          <div class="v"><a href="mailto:info@dunnettgroup.com">info@dunnettgroup.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="k">Craig Dunnett, Director</div>
+          <div class="v"><a href="mailto:craig@dunnettgroup.com">craig@dunnettgroup.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="k">Accounts</div>
+          <div class="v"><a href="mailto:accounts@dunnettgroup.com">accounts@dunnettgroup.com</a></div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <div>
+        <span class="eyebrow">Send an enquiry</span>
+        <hr class="rule" />
+        <form id="enquiry-form" action="#" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div class="field">
+            <label for="interest">How can we help?</label>
+            <select id="interest" name="interest">
+              <option>General enquiry</option>
+              <option>EHS Management Systems</option>
+              <option>Safe Systems of Work</option>
+              <option>EHS Project Management</option>
+              <option>Auditing &amp; Accreditation</option>
+              <option>Training</option>
+              <option>EHS Consultancy</option>
+              <option>Ongoing support / retainer</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about your business and what you need…"></textarea>
+          </div>
+          <button class="btn btn--gold" type="submit">Send enquiry</button>
+          <p id="form-msg" style="display:none; margin-top:1rem; color:var(--slate); font-size:.92rem;"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <b>DUNNETT GROUP</b>
+          <p>Professional Environmental, Health &amp; Safety solutions with a practical application. From risk to resilience.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">What We Do</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+447947678562">+44 (0)7947 678562</a></li>
+            <li><a href="mailto:info@dunnettgroup.com">info@dunnettgroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Dunnett Group is the trading name of Dunnett Group Consulting Ltd. Company No. 17153583. Registered in England &amp; Wales. &copy; <span id="yr">2026</span> Dunnett Group.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
