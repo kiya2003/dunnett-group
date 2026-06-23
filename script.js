@@ -16,7 +16,7 @@ if (form && form.getAttribute('action') === '#') {
     var msg = document.querySelector('#form-msg');
     if (msg) {
       msg.style.display = 'block';
-      msg.textContent = 'Thanks - this form needs connecting to an email service before it can send. For now please email info@dunnettgroup.com or call +44 (0)7947 678562.';
+      msg.textContent = 'Thanks, this form needs connecting to an email service before it can send. For now please email info@dunnettgroup.com or call +44 (0)7947 678562.';
     }
   });
 }
