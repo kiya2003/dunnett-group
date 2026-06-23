@@ -260,7 +260,7 @@ form textarea { min-height:140px; resize:vertical; }
 /* ---------- footer ---------- */
 .site-footer { background: var(--navy-dark); color:#aeb9c7; padding: 3.5rem 0 2rem; font-size:.92rem; }
 .site-footer h4 { color:#fff; font-size:.8rem; text-transform:uppercase; letter-spacing:.14em; margin-bottom:1rem; }
-.footer-grid { display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:2.5rem; }
+.footer-grid { display:grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap:2.5rem; }
 .footer-grid a { color:#aeb9c7; }
 .footer-grid a:hover { color:var(--gold); }
 .footer-brand b { font-family:"Montserrat",sans-serif; color:#fff; font-size:1.15rem; letter-spacing:.04em; display:block; margin-bottom:.6rem; }
@@ -268,6 +268,32 @@ form textarea { min-height:140px; resize:vertical; }
 .footer-links li { margin-bottom:.5rem; }
 .footer-bottom { border-top:1px solid rgba(255,255,255,.12); margin-top:2.5rem; padding-top:1.5rem; font-size:.82rem; color:#7e8a9a; }
 .footer-bottom a { color:#7e8a9a; }
+.footer-bottom a:hover { color: var(--gold); }
+
+/* social icons */
+.social { display:flex; gap:.7rem; margin-top:1.3rem; }
+.social a {
+  width:40px; height:40px; border:1px solid rgba(255,255,255,.22); border-radius:50%;
+  display:flex; align-items:center; justify-content:center; color:#aeb9c7; transition: all .18s ease;
+}
+.social a svg { width:18px; height:18px; }
+.social a:hover { color: var(--navy); background: var(--gold); border-color: var(--gold); }
+
+/* legal / prose pages */
+.prose { max-width: 780px; }
+.prose h2 { font-size: 1.4rem; margin: 2.4rem 0 .7rem; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { font-size: 1.08rem; margin: 1.7rem 0 .5rem; }
+.prose p, .prose li { color: var(--slate); }
+.prose ul { padding-left: 1.25rem; margin: 0 0 1.1em; }
+.prose li { margin-bottom: .4rem; }
+.prose a { color: var(--navy); text-decoration: underline; }
+.prose a:hover { color: var(--gold-dark); }
+.prose .updated { color: var(--slate); font-size: .9rem; font-style: italic; margin-bottom: 2rem; }
+
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 880px) {
