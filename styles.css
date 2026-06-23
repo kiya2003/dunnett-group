@@ -12,9 +12,11 @@
   --gold-dark:   #a9883a;
   --olive:       #6B7A3C;   /* support  */
   --slate:       #4A5568;   /* secondary text */
-  --ink:         #283039;   /* body text */
-  --offwhite:    #F7F7F5;
-  --line:        #E6E8EC;
+  --ink:         #2C2A26;   /* body text (warm) */
+  --offwhite:    #F2EEE6;   /* warm cream tint */
+  --stone:       #CAC4B6;   /* warm greige (Craig's preferred tone) */
+  --sand-line:   #DED7C9;
+  --line:        #E5DFD3;   /* warm border */
   --white:       #FFFFFF;
 
   --maxw: 1140px;
@@ -68,6 +70,21 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section--tint { background: var(--offwhite); }
 .section--navy { background: var(--navy); color: #e9edf3; }
 .section--navy h2, .section--navy h3 { color: #fff; }
+.section--stone { background: var(--stone); color: var(--ink); }
+.section--stone h2, .section--stone h3 { color: var(--navy); }
+.section--stone .eyebrow { color: var(--gold-dark); }
+
+/* About section: warm photo background */
+.about-photo {
+  position: relative;
+  background: linear-gradient(100deg, rgba(38,32,24,.84) 0%, rgba(38,32,24,.74) 55%, rgba(38,32,24,.62) 100%), url("assets/about.jpg") center/cover no-repeat;
+}
+.about-photo .container { position: relative; z-index: 1; }
+.about-photo .eyebrow { color: var(--gold); }
+.about-photo h2 { color: #fff; }
+.about-photo p { color: #ece9e2; }
+.about-photo .ticks li { color: #ece9e2; }
+.about-photo .ticks li::before { border-color: var(--gold); }
 
 .eyebrow {
   font-family: "Montserrat", sans-serif;
@@ -112,9 +129,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section--navy .btn--ghost { color: #fff; border-color: rgba(255,255,255,.6); }
 .section--navy .btn--ghost:hover { background: #fff; color: var(--navy); border-color:#fff; }
 
-/* ghost button on the navy hero needs the same light treatment */
-.hero .btn--ghost { color: #fff; border-color: rgba(255,255,255,.75); }
-.hero .btn--ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
+/* hero is now light/warm, so the default (navy) ghost button is already visible */
 
 /* ---------- header / nav ---------- */
 .site-header {
@@ -154,19 +169,20 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 
 /* ---------- hero ---------- */
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
-  color: #fff; position: relative; overflow: hidden;
+  background: linear-gradient(165deg, var(--stone) 0%, var(--offwhite) 100%);
+  color: var(--ink); position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--sand-line);
 }
 .hero::after {
   content:""; position:absolute; right:-10%; top:-30%;
   width:60%; height:160%;
-  background: radial-gradient(closest-side, rgba(194,161,74,.16), transparent 70%);
+  background: radial-gradient(closest-side, rgba(194,161,74,.18), transparent 70%);
   pointer-events:none;
 }
 .hero .container { position: relative; z-index: 1; padding-top: clamp(4rem,9vw,7rem); padding-bottom: clamp(4rem,9vw,7rem); }
-.hero h1 { color:#fff; max-width: 16ch; }
-.hero .eyebrow { color: var(--gold); }
-.hero p { color:#d7dfea; font-size:1.2rem; max-width: 52ch; }
+.hero h1 { color: var(--navy); max-width: 16ch; }
+.hero .eyebrow { color: var(--gold-dark); }
+.hero p { color: var(--slate); font-size:1.2rem; max-width: 52ch; }
 .hero .actions { margin-top: 2rem; display:flex; gap:1rem; flex-wrap:wrap; }
 
 /* ---------- grid + cards ---------- */
@@ -219,6 +235,11 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .feature .fi svg { width: 23px; height: 23px; stroke: var(--gold); fill:none; stroke-width: 2.4; stroke-linecap:round; stroke-linejoin:round; }
 .feature h3 { margin: .15rem 0 .35rem; font-size: 1.12rem; color:#fff; }
 .feature p { margin:0; color:#cdd6e2; font-size: .97rem; line-height:1.6; }
+/* feature band on warm stone */
+.section--stone .feature h3 { color: var(--navy); }
+.section--stone .feature p { color: var(--slate); }
+.section--stone .feature .fi { background: rgba(31,58,95,.09); }
+.section--stone .feature .fi svg { stroke: var(--gold-dark); }
 
 /* ---------- package tiers ---------- */
 .tier { display:flex; flex-direction:column; }
