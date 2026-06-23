@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Dunnett Group — site styles
+   Dunnett Group - site styles
    Palette taken from the logo & pricing PDF: navy, gold, olive.
    Fonts: Montserrat (headings) + Open Sans (body), per brand guidelines.
    Built for: professional, minimalistic, consistent.
@@ -112,6 +112,10 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section--navy .btn--ghost { color: #fff; border-color: rgba(255,255,255,.6); }
 .section--navy .btn--ghost:hover { background: #fff; color: var(--navy); border-color:#fff; }
 
+/* ghost button on the navy hero needs the same light treatment */
+.hero .btn--ghost { color: #fff; border-color: rgba(255,255,255,.75); }
+.hero .btn--ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
+
 /* ---------- header / nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
@@ -121,10 +125,10 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  height: 76px;
+  height: 100px;
 }
 .brand { display: flex; align-items: center; gap: .65rem; }
-.brand img { height: 44px; width: auto; border-radius: 3px; }
+.brand img { height: 74px; width: auto; border-radius: 4px; }
 .brand b {
   font-family: "Montserrat", sans-serif; color: var(--navy);
   font-weight: 700; letter-spacing: .04em; font-size: 1.05rem;
@@ -141,6 +145,8 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--gold);
 }
 .nav-cta { margin-left: .5rem; }
+.nav-links .nav-cta a { padding: .78rem 1.7rem; font-size: .92rem; line-height: 1; }
+.nav-links .nav-cta a::after { display: none; }
 
 .nav-toggle { display:none; background:none; border:0; cursor:pointer; padding:.4rem; }
 .nav-toggle span { display:block; width:24px; height:2px; background:var(--navy); margin:5px 0; transition:.2s; }
@@ -202,6 +208,17 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section--navy .ticks li { color:#cdd6e2; }
 .section--navy .ticks li::before { border-color: var(--gold); }
 
+/* ---------- feature grid (Why clients choose us) ---------- */
+.features { display:grid; grid-template-columns: repeat(2, 1fr); gap: 2.2rem 3.5rem; margin-top: .5rem; }
+.feature { display:flex; gap: 1.15rem; align-items:flex-start; }
+.feature .fi {
+  flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(194,161,74,.16); display:flex; align-items:center; justify-content:center;
+}
+.feature .fi svg { width: 23px; height: 23px; stroke: var(--gold); fill:none; stroke-width: 2.4; stroke-linecap:round; stroke-linejoin:round; }
+.feature h3 { margin: .15rem 0 .35rem; font-size: 1.12rem; color:#fff; }
+.feature p { margin:0; color:#cdd6e2; font-size: .97rem; line-height:1.6; }
+
 /* ---------- package tiers ---------- */
 .tier { display:flex; flex-direction:column; }
 .tier .tier-name { font-family:"Montserrat",sans-serif; font-weight:700; color:var(--navy); font-size:1.25rem; }
@@ -259,7 +276,7 @@ form textarea { min-height:140px; resize:vertical; }
 }
 @media (max-width: 680px) {
   .nav-links {
-    position: absolute; top: 76px; left:0; right:0;
+    position: absolute; top: 84px; left:0; right:0;
     background:#fff; border-bottom:1px solid var(--line);
     flex-direction: column; align-items: flex-start; gap:0;
     padding: .5rem var(--pad) 1.2rem; display:none;
@@ -272,5 +289,7 @@ form textarea { min-height:140px; resize:vertical; }
   .nav-toggle { display:block; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .brand span { display:none; }
+  .features { grid-template-columns: 1fr; gap: 1.7rem; }
+  .nav { height: 84px; }
+  .brand img { height: 60px; }
 }
