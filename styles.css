@@ -105,9 +105,6 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 
 .center { text-align: center; }
 .center .lead { margin-left: auto; margin-right: auto; }
-/* long centred intros read as a tidy left-aligned block (centred on the page),
-   instead of tapering like a funnel */
-.section-head.center .lead { text-align: left; max-width: 58ch; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -371,18 +368,15 @@ form textarea { min-height:140px; resize:vertical; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 680px) {
+  /* mobile: no burger; just the Book a Call button top-right (full nav is in the footer) */
+  .nav-toggle { display: none; }
   .nav-links {
-    position: absolute; top: 88px; left:0; right:0;
-    background:#fff; border-bottom:1px solid var(--line);
-    flex-direction: column; align-items: flex-start; gap:0;
-    padding: .5rem var(--pad) 1.2rem; display:none;
+    position: static; display: flex; flex-direction: row; align-items: center;
+    background: none; border: none; padding: 0; gap: 0;
   }
-  .nav-links.open { display:flex; }
-  .nav-links li { width:100%; }
-  .nav-links a { display:block; width:100%; padding:.8rem 0; border-bottom:1px solid var(--line); }
-  .nav-links a::after { display:none; }
-  .nav-cta { margin:.8rem 0 0; }
-  .nav-toggle { display:block; }
+  .nav-links li:not(.nav-cta) { display: none; }
+  .nav-links .nav-cta { margin: 0; }
+  .nav-links .nav-cta a { display: inline-block; width: auto; padding: .62rem 1.3rem; border-bottom: none; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; gap: 1.7rem; }
