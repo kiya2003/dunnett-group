@@ -45,13 +45,15 @@ h1, h2, h3, h4 {
   margin: 0 0 0.6em;
   font-weight: 700;
   letter-spacing: -0.01em;
+  text-wrap: balance;        /* avoid lonely one-word heading lines */
 }
 
 h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
 h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
 h3 { font-size: 1.2rem; }
 
-p { margin: 0 0 1.1em; }
+p { margin: 0 0 1.1em; text-wrap: pretty; }   /* avoid one/two-word orphan lines */
+li { text-wrap: pretty; }
 
 a { color: var(--navy); text-decoration: none; }
 a:hover { color: var(--gold-dark); }
