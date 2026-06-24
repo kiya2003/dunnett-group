@@ -202,6 +202,24 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   .hero-illustration { display: none; }
 }
 
+/* contact page: capture form beside the copy */
+.contact-hero .container { align-items: start; grid-template-columns: 1fr 1.05fr; }
+.contact-list { list-style: none; margin: 1.6rem 0 0; padding: 0; }
+.contact-list li { display: flex; gap: .8rem; align-items: baseline; margin-bottom: .55rem; }
+.contact-list .k { font-family: "Montserrat", sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gold-dark); min-width: 74px; }
+.contact-list a { color: var(--navy); font-weight: 600; }
+.contact-card {
+  position: relative; overflow: hidden;
+  background: #FBF9F4; border: 1px solid var(--sand-line); border-radius: 10px;
+  padding: 1.9rem; box-shadow: 0 18px 50px rgba(31,58,95,.13);
+}
+.contact-card::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); }
+.contact-card-label { font-family: "Montserrat", sans-serif; font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin: 0 0 1.2rem; }
+.contact-card form .field:last-of-type { margin-bottom: 1.2rem; }
+@media (max-width: 880px) {
+  .contact-hero .container { grid-template-columns: 1fr; }
+}
+
 /* hero two-column with credentials card */
 .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(2rem,5vw,4rem); align-items: center; }
 .hero-card {
