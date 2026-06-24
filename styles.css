@@ -203,7 +203,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 }
 
 /* contact page: capture form beside the copy */
-.contact-hero .container { align-items: start; grid-template-columns: 1fr 1.05fr; }
+.contact-hero .container { align-items: start; grid-template-columns: 0.85fr 1.15fr; }
 .contact-list { list-style: none; margin: 1.6rem 0 0; padding: 0; }
 .contact-list li { display: flex; gap: .8rem; align-items: baseline; margin-bottom: .55rem; }
 .contact-list .k { font-family: "Montserrat", sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gold-dark); min-width: 74px; }
@@ -215,9 +215,17 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 }
 .contact-card::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); }
 .contact-card-label { font-family: "Montserrat", sans-serif; font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin: 0 0 1.2rem; }
-.contact-card form .field:last-of-type { margin-bottom: 1.2rem; }
+/* compact two-up form so it fits without scrolling */
+.contact-card form { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem 1rem; }
+.contact-card .field { margin-bottom: 0; }
+.contact-card .field--full, .contact-card button[type="submit"], .contact-card #form-msg { grid-column: 1 / -1; }
+.contact-card label { margin-bottom: .3rem; }
+.contact-card textarea { min-height: 92px; }
 @media (max-width: 880px) {
   .contact-hero .container { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .contact-card form { grid-template-columns: 1fr; }
 }
 
 /* hero two-column with credentials card */
