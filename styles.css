@@ -231,7 +231,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 }
 
 /* hero two-column with credentials card */
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,5vw,4rem); align-items: start; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.12fr; gap: clamp(2rem,5vw,4rem); align-items: stretch; }
 .hero-card {
   position: relative; overflow: hidden;
   background: #FBF9F4;   /* warm off-white, between paper and pure white */
@@ -239,6 +239,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   border-radius: 10px;
   padding: 1.9rem 1.9rem 1.7rem;
   box-shadow: 0 18px 50px rgba(31,58,95,.13);
+  display: flex; flex-direction: column;
 }
 .hero-card::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); }
 .hero-card-head { display:flex; align-items:center; gap:.7rem; margin-bottom:1.4rem; }
@@ -248,13 +249,14 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   font-family: "Montserrat", sans-serif; font-size: 1.02rem; font-weight: 700;
   color: var(--navy); margin: 0; line-height: 1.3; letter-spacing: -0.01em;
 }
-.cred-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: .6rem; }
+.cred-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .55rem; flex: 1; justify-content: space-between; }
 .cred-chips li {
   display: flex; align-items: flex-start; gap: .55rem; line-height: 1.3;
   font-family: "Montserrat", sans-serif; font-weight: 600; font-size: .92rem; color: var(--navy);
 }
 .cred-chips svg { width: 16px; height: 16px; margin-top: 1px; flex: 0 0 auto; stroke: var(--gold-dark); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.cred-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem 1.6rem; }
+.cred-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem 1.6rem; flex: 1; }
+.cred-col { display: flex; flex-direction: column; }
 .cred-group-label { font-family: "Montserrat", sans-serif; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--risk); margin: 0 0 .7rem; }
 .cred-group-label--core { color: var(--gold-dark); }
 .cred-chips--risk svg { stroke: var(--risk); }
@@ -271,7 +273,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   .hero-card-head { margin-bottom: .7rem; }
   .hero-card-label { color: var(--gold-dark); }
   .cred-cols { grid-template-columns: 1fr; gap: 1.2rem; }
-  .cred-chips { grid-template-columns: 1fr; gap: .55rem; margin-bottom: 0; }
+  .cred-chips { justify-content: flex-start; gap: .55rem; margin-bottom: 0; }
   .cred-chips li { font-size: .9rem; }
   .hero-card-proof { display: block; padding-top: 0; border-top: none; margin-top: .9rem; font-size: .86rem; }
   /* Book a discovery call lives in the header on mobile; leave just Explore our services */
