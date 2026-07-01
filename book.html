@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Dunnett Group</title>
-  <meta name="description" content="Get in touch with Dunnett Group. Send an enquiry or book a discovery call to confirm the right level of EHS support for your business." />
+  <title>Book a Discovery Call | Dunnett Group</title>
+  <meta name="description" content="Book a discovery call with Dunnett Group. A short conversation is usually all that's needed to confirm the right level of EHS support for your business." />
   <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dunnett Group" />
-  <meta property="og:title" content="Contact | Dunnett Group" />
-  <meta property="og:description" content="Get in touch with Dunnett Group. Send an enquiry or book a discovery call to confirm the right level of EHS support for your business." />
-  <meta property="og:url" content="https://dunnett-group.pages.dev/contact.html" />
+  <meta property="og:title" content="Book a Discovery Call | Dunnett Group" />
+  <meta property="og:description" content="Book a discovery call with Dunnett Group. A short conversation is usually all that's needed to confirm the right level of EHS support for your business." />
+  <meta property="og:url" content="https://dunnett-group.pages.dev/book.html" />
   <meta property="og:image" content="https://dunnett-group.pages.dev/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Dunnett Group, From Risk to Resilience" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact | Dunnett Group" />
-  <meta name="twitter:description" content="Get in touch with Dunnett Group. Send an enquiry or book a discovery call to confirm the right level of EHS support for your business." />
+  <meta name="twitter:title" content="Book a Discovery Call | Dunnett Group" />
+  <meta name="twitter:description" content="Book a discovery call with Dunnett Group. A short conversation is usually all that's needed to confirm the right level of EHS support for your business." />
   <meta name="twitter:image" content="https://dunnett-group.pages.dev/assets/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +36,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">What We Do</a></li>
-        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-right">
         <a class="btn btn--gold nav-book" href="book.html">Book a Call</a>
@@ -45,54 +45,22 @@
     </div>
   </header>
 
-  <!-- CONTACT HERO + ENQUIRY FORM -->
+  <!-- CONTACT HERO + BOOKING -->
   <section class="hero hero--split contact-hero">
     <div class="container">
       <div class="hero-copy">
-        <span class="eyebrow">Contact</span>
-        <h1>Get in touch with the team</h1>
-        <p>Tell us a little about your business and what you need, and we'll be in touch. Prefer to pick a time? You can <a href="book.html">book a discovery call</a>&nbsp;instead.</p>
+        <span class="eyebrow">Book a call</span>
+        <h1>Book a discovery call</h1>
+        <p>A short conversation is usually all that's needed to confirm the right level of support. Pick a time that suits you and book a 30-minute discovery call with the&nbsp;team.</p>
         <ul class="contact-list">
           <li><span class="k">Email</span><a href="mailto:info@dunnettgroup.com">info@dunnettgroup.com</a></li>
           <li><span class="k">Accounts</span><a href="mailto:accounts@dunnettgroup.com">accounts@dunnettgroup.com</a></li>
         </ul>
       </div>
 
-      <div class="contact-card">
-        <p class="contact-card-label">Send an enquiry</p>
-        <form id="enquiry-form" action="#" method="POST">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="field">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" />
-          </div>
-          <div class="field">
-            <label for="interest">How can we help?</label>
-            <select id="interest" name="interest">
-              <option>General enquiry</option>
-              <option>EHS Management Systems</option>
-              <option>Safe Systems of Work</option>
-              <option>EHS Project Management</option>
-              <option>Auditing &amp; Accreditation</option>
-              <option>Training</option>
-              <option>EHS Consultancy</option>
-              <option>Ongoing support / retainer</option>
-            </select>
-          </div>
-          <div class="field field--full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us a little about your business and what you need…"></textarea>
-          </div>
-          <button class="btn btn--gold" type="submit">Send enquiry</button>
-          <p id="form-msg" style="display:none; margin-top:1rem; color:var(--slate); font-size:.92rem;"></p>
-        </form>
+      <div class="contact-card contact-card--booking">
+        <p class="contact-card-label">Book a discovery call</p>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/dunnettgroup-info/30min" style="min-width:280px;height:660px;"></div>
       </div>
     </div>
   </section>
@@ -139,6 +107,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
