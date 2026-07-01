@@ -221,10 +221,15 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 
 /* ---------- booking page ---------- */
 .booking .section-head { max-width: 42rem; }
-.booking-embed { max-width: 960px; margin: 0 auto; background: #fff; border: 1px solid var(--sand-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 44px rgba(31,58,95,.09); }
+.section--navy.booking h1 { color: #fff; }
+.booking-embed { position: relative; max-width: 960px; margin: 0 auto; background: #fff; border: 1px solid var(--sand-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 44px rgba(31,58,95,.09); }
+.booking-embed::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); z-index: 3; }
 .booking-embed .calendly-inline-widget { border-radius: 12px; }
-.booking-alt { text-align: center; margin-top: 1.5rem; color: var(--slate); font-size: .95rem; }
+.section--navy .booking-embed { border-color: rgba(255,255,255,.15); box-shadow: 0 24px 60px rgba(0,0,0,.32); }
+.booking-alt { text-align: center; margin-top: 1.6rem; color: var(--slate); font-size: .95rem; }
 .booking-alt a { color: var(--navy); font-weight: 600; }
+.section--navy .booking-alt { color: #cdd6e2; }
+.section--navy .booking-alt a { color: #fff; }
 /* compact two-up form so it fits without scrolling */
 .contact-card form { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem 1rem; }
 .contact-card .field { margin-bottom: 0; }
