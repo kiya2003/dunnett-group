@@ -222,7 +222,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 /* ---------- booking page ---------- */
 .booking .section-head { max-width: 42rem; }
 .section--navy.booking h1 { color: #fff; }
-.booking-embed { position: relative; max-width: 620px; margin: 0 auto; background: #fff; border: 1px solid var(--sand-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 44px rgba(31,58,95,.09); }
+.booking-embed { position: relative; max-width: 460px; margin: 0 auto; background: #fff; border: 1px solid var(--sand-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 44px rgba(31,58,95,.09); }
 .booking-embed::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); z-index: 3; }
 .booking-embed .calendly-inline-widget { border-radius: 12px; }
 .section--navy .booking-embed { border-color: rgba(255,255,255,.15); box-shadow: 0 24px 60px rgba(0,0,0,.32); }
